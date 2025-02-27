@@ -16,4 +16,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Iniciar servidor Flask
-gunicorn --bind 0.0.0.0:5000 web.app:app
+gunicorn --bind 0.0.0.0:5005 web.app:app
