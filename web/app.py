@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-from config import Config
+from config import Config  # Importación corregida
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -14,7 +14,7 @@ with app.app_context():
 
 # Autenticación
 login_manager = LoginManager()
-login_manager.init_process(app)
+login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
 
 @login_manager.user_loader
