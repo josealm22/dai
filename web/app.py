@@ -3,6 +3,13 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from config import Config  # Importación corregida
+from web import create_app
+
+app = create_app()
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5005)
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
