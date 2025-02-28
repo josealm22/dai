@@ -20,6 +20,8 @@ fi
 # Activar entorno virtual e instalar dependencias
 source "$VENV_DIR/bin/activate"
 pip install -r "$WORKING_DIR/requirements.txt"
+python3 generate_secret_token.py 
+
 
 # Crear archivo de servicio systemd
 SERVICE_FILE="/etc/systemd/system/$SERVICE_NAME.service"
